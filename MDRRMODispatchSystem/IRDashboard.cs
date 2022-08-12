@@ -42,5 +42,10 @@ namespace DRRMOperationsIMS
         {
             datasearch();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -26,14 +26,16 @@ namespace DRRMOperationsIMS
             con.Open();
             OleDbCommand cmd = new OleDbCommand
                 (
-                    "Insert into tbl_ir (DOI,TOI,NatureOfIncident,PlaceOfIncident,NoOfCasualty,Hospital,IsItCollision,VehicleInvolved,RespondedBy)" +
+                    "Insert into tbl_ir (DOI,TOI,NatureOfIncident,PlaceOfIncident,NoOfCasualties,Hospital,IsItCollision,VehicleInvolved,RespondedBy,Remarks)" +
                     "values" +
-                    "('" + dateTimePicker1.Text + "','" + txtTime.Text + "','" + cmbNOI.Text + "','" + cmbPOI.Text + "'," + txtCasualty.Text + ",'" + cmbHospital.Text + "','" + cmbCollision.Text + "','" + txtVehicles.Text + "','" + txtResponded.Text + "')", con
+                    "('" + dateTimePicker1.Text + "','" + txtTime.Text + "','" + cmbNOI.Text + "','" + cmbPOI.Text + "'," + txtCasualty.Text + ",'" + cmbHospital.Text + "','" + cmbCollision.Text + "','" + txtVehicles.Text + "','" + txtResponded.Text + "','" + txtRemarks.Text + "')", con
                 );
 
             cmd.ExecuteNonQuery();
             con.Close();
             MessageBox.Show("Data Successfully Recorded!");
+
+            clearTextbox();
         }
 
         private void txtIRNum_TextChanged(object sender, EventArgs e)
@@ -63,6 +65,7 @@ namespace DRRMOperationsIMS
                     cmbCollision.Text = dr["IsItCollision"].ToString();
                     txtVehicles.Text = dr["VehicleInvolved"].ToString();
                     txtResponded.Text = dr["RespondedBy"].ToString();
+                    txtRemarks.Text = dr["Remarks"].ToString();
                 }
             }
 
@@ -74,11 +77,13 @@ namespace DRRMOperationsIMS
             con.Open();
             OleDbCommand cmd = new OleDbCommand
                 (
-                    //"Update tbl_ir set DOI='" + dateTimePicker1.Text + "',TOI='" + txtTime.Text + "',PatientName='" + tbPname.Text + "',Age='" + tbAge.Text + "',Origin='" + tbOrigin.Text + "',Destination='" + tbDestination.Text + "',ReferredBy='" + tbRef.Text + "',Transport='" + cbTransport.Text + "',Dispatcher='" + cbDispatcher.Text + "' where ID=" + tbID.Text + " ", con
+                    "Update tbl_ir set DOI='" + dateTimePicker1.Text + "',TOI='" + txtTime.Text + "',NatureOfIncident='" + cmbNOI.Text + "',PlaceofIncident='" + cmbPOI.Text + "',NoOfCasualties='" + txtCasualty.Text + "',Hospital='" + cmbHospital.Text + "',IsItCollision='" + cmbCollision.Text + "',VehicleInvolved='" + txtVehicles.Text + "',RespondedBy='" + txtResponded.Text + "',Remarks='" + txtRemarks.Text + "' where ID=" + txtIRNum.Text + " ", con
                 );
             cmd.ExecuteNonQuery();
             con.Close();
             MessageBox.Show("Data Updated Successfully!");
+
+            clearTextbox();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -86,5 +91,21 @@ namespace DRRMOperationsIMS
             this.Controls.Clear();
             this.InitializeComponent();
         }
+
+        private void clearTextbox()
+        {
+            dateTimePicker1.Text = String.Empty;
+            txtTime.Text = String.Empty;
+            cmbNOI.Text = String.Empty;
+            cmbPOI.Text = String.Empty;
+            txtCasualty.Text = String.Empty;
+            cmbHospital.Text = String.Empty;
+            cmbCollision.Text = String.Empty;
+            txtVehicles.Text = String.Empty;
+            txtResponded.Text = String.Empty;
+            txtRemarks.Text = String.Empty;
+            txtIRNum.Text = String.Empty;
+        }
+
     }
 }

@@ -47,6 +47,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbDate = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtRemarks = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtTime = new System.Windows.Forms.TextBox();
             this.txtVehicles = new System.Windows.Forms.TextBox();
             this.cmbHospital = new System.Windows.Forms.ComboBox();
             this.txtResponded = new System.Windows.Forms.TextBox();
@@ -54,20 +57,19 @@
             this.cmbPOI = new System.Windows.Forms.ComboBox();
             this.cmbNOI = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtTime = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnUpdate
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnUpdate.FlatAppearance.BorderSize = 0;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Source Sans Pro", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(631, 539);
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnUpdate.ForeColor = System.Drawing.Color.Black;
+            this.btnUpdate.Location = new System.Drawing.Point(1046, 228);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(125, 39);
+            this.btnUpdate.Size = new System.Drawing.Size(92, 21);
             this.btnUpdate.TabIndex = 29;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -76,53 +78,55 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Source Sans Pro Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(14, 320);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(776, 53);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(177, 26);
+            this.label5.Size = new System.Drawing.Size(119, 17);
             this.label5.TabIndex = 36;
             this.label5.Text = "Vehicles Involved:";
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePicker1.Font = new System.Drawing.Font("Source Sans Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePicker1.CustomFormat = "MM/DD/YYYY";
+            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(243, 24);
+            this.dateTimePicker1.Location = new System.Drawing.Point(104, 12);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(144, 31);
+            this.dateTimePicker1.Size = new System.Drawing.Size(144, 23);
             this.dateTimePicker1.TabIndex = 26;
+            this.dateTimePicker1.Value = new System.DateTime(2022, 8, 11, 10, 3, 48, 0);
             // 
             // lbID
             // 
             this.lbID.AutoSize = true;
-            this.lbID.Font = new System.Drawing.Font("Source Sans Pro Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbID.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbID.ForeColor = System.Drawing.Color.Black;
-            this.lbID.Location = new System.Drawing.Point(719, 15);
+            this.lbID.Location = new System.Drawing.Point(1043, 10);
             this.lbID.Name = "lbID";
-            this.lbID.Size = new System.Drawing.Size(122, 19);
+            this.lbID.Size = new System.Drawing.Size(99, 13);
             this.lbID.TabIndex = 32;
             this.lbID.Text = "Search using IR #:";
             // 
             // txtIRNum
             // 
-            this.txtIRNum.Font = new System.Drawing.Font("Source Sans Pro", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtIRNum.Location = new System.Drawing.Point(872, 12);
+            this.txtIRNum.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtIRNum.Location = new System.Drawing.Point(1165, 5);
             this.txtIRNum.Name = "txtIRNum";
-            this.txtIRNum.Size = new System.Drawing.Size(137, 26);
+            this.txtIRNum.Size = new System.Drawing.Size(195, 22);
             this.txtIRNum.TabIndex = 33;
             this.txtIRNum.TextChanged += new System.EventHandler(this.txtIRNum_TextChanged);
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btnAdd.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Source Sans Pro", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(492, 539);
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAdd.ForeColor = System.Drawing.Color.Black;
+            this.btnAdd.Location = new System.Drawing.Point(934, 228);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(125, 39);
+            this.btnAdd.Size = new System.Drawing.Size(92, 21);
             this.btnAdd.TabIndex = 28;
             this.btnAdd.Text = "Add Item";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -130,14 +134,14 @@
             // 
             // btnClear
             // 
-            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnClear.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnClear.FlatAppearance.BorderSize = 0;
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Font = new System.Drawing.Font("Source Sans Pro", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(766, 539);
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnClear.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnClear.ForeColor = System.Drawing.Color.Black;
+            this.btnClear.Location = new System.Drawing.Point(1153, 228);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(125, 39);
+            this.btnClear.Size = new System.Drawing.Size(92, 21);
             this.btnClear.TabIndex = 30;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -145,22 +149,22 @@
             // 
             // txtCasualty
             // 
-            this.txtCasualty.Font = new System.Drawing.Font("Source Sans Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCasualty.Location = new System.Drawing.Point(243, 170);
+            this.txtCasualty.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCasualty.Location = new System.Drawing.Point(663, 48);
             this.txtCasualty.Name = "txtCasualty";
-            this.txtCasualty.Size = new System.Drawing.Size(759, 31);
+            this.txtCasualty.Size = new System.Drawing.Size(93, 23);
             this.txtCasualty.TabIndex = 31;
             // 
             // btnDel
             // 
-            this.btnDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.btnDel.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnDel.FlatAppearance.BorderSize = 0;
-            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDel.Font = new System.Drawing.Font("Source Sans Pro", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDel.ForeColor = System.Drawing.Color.White;
-            this.btnDel.Location = new System.Drawing.Point(902, 539);
+            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnDel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDel.ForeColor = System.Drawing.Color.Black;
+            this.btnDel.Location = new System.Drawing.Point(1258, 228);
             this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(125, 39);
+            this.btnDel.Size = new System.Drawing.Size(92, 21);
             this.btnDel.TabIndex = 31;
             this.btnDel.Text = "Delete";
             this.btnDel.UseVisualStyleBackColor = false;
@@ -168,87 +172,91 @@
             // lbTransport
             // 
             this.lbTransport.AutoSize = true;
-            this.lbTransport.Font = new System.Drawing.Font("Source Sans Pro Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbTransport.Location = new System.Drawing.Point(14, 371);
+            this.lbTransport.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbTransport.Location = new System.Drawing.Point(3, 86);
             this.lbTransport.Name = "lbTransport";
-            this.lbTransport.Size = new System.Drawing.Size(148, 26);
+            this.lbTransport.Size = new System.Drawing.Size(99, 17);
             this.lbTransport.TabIndex = 13;
             this.lbTransport.Text = "Responded By:";
             // 
             // lblOrigin
             // 
             this.lblOrigin.AutoSize = true;
-            this.lblOrigin.Font = new System.Drawing.Font("Source Sans Pro", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblOrigin.Location = new System.Drawing.Point(16, 221);
+            this.lblOrigin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblOrigin.Location = new System.Drawing.Point(5, 50);
             this.lblOrigin.Name = "lblOrigin";
-            this.lblOrigin.Size = new System.Drawing.Size(187, 20);
+            this.lblOrigin.Size = new System.Drawing.Size(168, 17);
             this.lblOrigin.TabIndex = 12;
             this.lblOrigin.Text = "Endorsed to w/c Hospital:";
             // 
             // lblDestination
             // 
             this.lblDestination.AutoSize = true;
-            this.lblDestination.Font = new System.Drawing.Font("Source Sans Pro Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDestination.Location = new System.Drawing.Point(16, 269);
+            this.lblDestination.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblDestination.Location = new System.Drawing.Point(367, 53);
             this.lblDestination.Name = "lblDestination";
-            this.lblDestination.Size = new System.Drawing.Size(145, 26);
+            this.lblDestination.Size = new System.Drawing.Size(99, 17);
             this.lblDestination.TabIndex = 11;
             this.lblDestination.Text = "Is it Collision?:";
             // 
             // lblAgeOfPt
             // 
             this.lblAgeOfPt.AutoSize = true;
-            this.lblAgeOfPt.Font = new System.Drawing.Font("Source Sans Pro Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblAgeOfPt.Location = new System.Drawing.Point(16, 172);
+            this.lblAgeOfPt.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAgeOfPt.Location = new System.Drawing.Point(552, 51);
             this.lblAgeOfPt.Name = "lblAgeOfPt";
-            this.lblAgeOfPt.Size = new System.Drawing.Size(156, 26);
+            this.lblAgeOfPt.Size = new System.Drawing.Size(107, 17);
             this.lblAgeOfPt.TabIndex = 10;
             this.lblAgeOfPt.Text = "No. of Casualty:";
             // 
             // lblPtname
             // 
             this.lblPtname.AutoSize = true;
-            this.lblPtname.Font = new System.Drawing.Font("Source Sans Pro Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPtname.Location = new System.Drawing.Point(14, 126);
+            this.lblPtname.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblPtname.Location = new System.Drawing.Point(868, 16);
             this.lblPtname.Name = "lblPtname";
-            this.lblPtname.Size = new System.Drawing.Size(171, 26);
+            this.lblPtname.Size = new System.Drawing.Size(115, 17);
             this.lblPtname.TabIndex = 9;
             this.lblPtname.Text = "Place of Incident:";
             // 
             // lbCase
             // 
             this.lbCase.AutoSize = true;
-            this.lbCase.Font = new System.Drawing.Font("Source Sans Pro Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbCase.Location = new System.Drawing.Point(14, 75);
+            this.lbCase.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbCase.Location = new System.Drawing.Point(445, 16);
             this.lbCase.Name = "lbCase";
-            this.lbCase.Size = new System.Drawing.Size(186, 26);
+            this.lbCase.Size = new System.Drawing.Size(125, 17);
             this.lbCase.TabIndex = 8;
             this.lbCase.Text = "Nature of Incident:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Source Sans Pro", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(10, 15);
+            this.label1.Location = new System.Drawing.Point(10, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 20);
+            this.label1.Size = new System.Drawing.Size(178, 21);
             this.label1.TabIndex = 26;
             this.label1.Text = "Incidents Report Form";
             // 
             // lbDate
             // 
             this.lbDate.AutoSize = true;
-            this.lbDate.Font = new System.Drawing.Font("Source Sans Pro Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbDate.Location = new System.Drawing.Point(16, 29);
+            this.lbDate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbDate.Location = new System.Drawing.Point(3, 16);
             this.lbDate.Name = "lbDate";
-            this.lbDate.Size = new System.Drawing.Size(141, 26);
+            this.lbDate.Size = new System.Drawing.Size(95, 17);
             this.lbDate.TabIndex = 7;
             this.lbDate.Text = "Date Occured:";
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.txtRemarks);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.txtTime);
             this.panel2.Controls.Add(this.txtVehicles);
             this.panel2.Controls.Add(this.cmbHospital);
             this.panel2.Controls.Add(this.txtResponded);
@@ -266,54 +274,82 @@
             this.panel2.Controls.Add(this.lblPtname);
             this.panel2.Controls.Add(this.lbCase);
             this.panel2.Controls.Add(this.lbDate);
-            this.panel2.Location = new System.Drawing.Point(10, 56);
+            this.panel2.Location = new System.Drawing.Point(10, 33);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1031, 445);
+            this.panel2.Size = new System.Drawing.Size(1350, 228);
             this.panel2.TabIndex = 27;
+            // 
+            // txtRemarks
+            // 
+            this.txtRemarks.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtRemarks.Location = new System.Drawing.Point(437, 86);
+            this.txtRemarks.Multiline = true;
+            this.txtRemarks.Name = "txtRemarks";
+            this.txtRemarks.Size = new System.Drawing.Size(903, 97);
+            this.txtRemarks.TabIndex = 49;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(367, 86);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 17);
+            this.label2.TabIndex = 48;
+            this.label2.Text = "Remarks:";
+            // 
+            // txtTime
+            // 
+            this.txtTime.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtTime.Location = new System.Drawing.Point(311, 12);
+            this.txtTime.Name = "txtTime";
+            this.txtTime.Size = new System.Drawing.Size(114, 23);
+            this.txtTime.TabIndex = 47;
             // 
             // txtVehicles
             // 
-            this.txtVehicles.Font = new System.Drawing.Font("Source Sans Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtVehicles.Location = new System.Drawing.Point(243, 318);
+            this.txtVehicles.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtVehicles.Location = new System.Drawing.Point(901, 51);
             this.txtVehicles.Name = "txtVehicles";
-            this.txtVehicles.Size = new System.Drawing.Size(759, 31);
+            this.txtVehicles.Size = new System.Drawing.Size(439, 23);
             this.txtVehicles.TabIndex = 46;
             // 
             // cmbHospital
             // 
-            this.cmbHospital.Font = new System.Drawing.Font("Source Sans Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmbHospital.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmbHospital.FormattingEnabled = true;
             this.cmbHospital.Items.AddRange(new object[] {
             "DMMDH",
             "NSDAH"});
-            this.cmbHospital.Location = new System.Drawing.Point(243, 218);
+            this.cmbHospital.Location = new System.Drawing.Point(177, 47);
             this.cmbHospital.Name = "cmbHospital";
-            this.cmbHospital.Size = new System.Drawing.Size(759, 32);
+            this.cmbHospital.Size = new System.Drawing.Size(170, 23);
             this.cmbHospital.TabIndex = 45;
             // 
             // txtResponded
             // 
-            this.txtResponded.Font = new System.Drawing.Font("Source Sans Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtResponded.Location = new System.Drawing.Point(243, 371);
+            this.txtResponded.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtResponded.Location = new System.Drawing.Point(107, 85);
+            this.txtResponded.Multiline = true;
             this.txtResponded.Name = "txtResponded";
-            this.txtResponded.Size = new System.Drawing.Size(759, 31);
+            this.txtResponded.Size = new System.Drawing.Size(240, 98);
             this.txtResponded.TabIndex = 44;
             // 
             // cmbCollision
             // 
-            this.cmbCollision.Font = new System.Drawing.Font("Source Sans Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmbCollision.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmbCollision.FormattingEnabled = true;
             this.cmbCollision.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.cmbCollision.Location = new System.Drawing.Point(243, 266);
+            this.cmbCollision.Location = new System.Drawing.Point(470, 50);
             this.cmbCollision.Name = "cmbCollision";
-            this.cmbCollision.Size = new System.Drawing.Size(759, 32);
+            this.cmbCollision.Size = new System.Drawing.Size(63, 23);
             this.cmbCollision.TabIndex = 42;
             // 
             // cmbPOI
             // 
-            this.cmbPOI.Font = new System.Drawing.Font("Source Sans Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmbPOI.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmbPOI.FormattingEnabled = true;
             this.cmbPOI.Items.AddRange(new object[] {
             "Angeles",
@@ -358,14 +394,14 @@
             "Tinandog",
             "Villa Ibaba",
             "Villa Ilaya"});
-            this.cmbPOI.Location = new System.Drawing.Point(243, 124);
+            this.cmbPOI.Location = new System.Drawing.Point(987, 13);
             this.cmbPOI.Name = "cmbPOI";
-            this.cmbPOI.Size = new System.Drawing.Size(759, 32);
+            this.cmbPOI.Size = new System.Drawing.Size(353, 23);
             this.cmbPOI.TabIndex = 41;
             // 
             // cmbNOI
             // 
-            this.cmbNOI.Font = new System.Drawing.Font("Source Sans Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmbNOI.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmbNOI.FormattingEnabled = true;
             this.cmbNOI.Items.AddRange(new object[] {
             "Road Crash",
@@ -376,35 +412,27 @@
             "Stabbing",
             "Water Transportation",
             "Weather Related Injuries"});
-            this.cmbNOI.Location = new System.Drawing.Point(243, 74);
+            this.cmbNOI.Location = new System.Drawing.Point(574, 13);
             this.cmbNOI.Name = "cmbNOI";
-            this.cmbNOI.Size = new System.Drawing.Size(759, 32);
+            this.cmbNOI.Size = new System.Drawing.Size(272, 23);
             this.cmbNOI.TabIndex = 40;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Source Sans Pro Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(441, 29);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(266, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 26);
+            this.label3.Size = new System.Drawing.Size(43, 17);
             this.label3.TabIndex = 38;
             this.label3.Text = "Time:";
-            // 
-            // txtTime
-            // 
-            this.txtTime.Font = new System.Drawing.Font("Source Sans Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTime.Location = new System.Drawing.Point(558, 82);
-            this.txtTime.Name = "txtTime";
-            this.txtTime.Size = new System.Drawing.Size(454, 31);
-            this.txtTime.TabIndex = 47;
             // 
             // IRTools
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1053, 672);
-            this.Controls.Add(this.txtTime);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1372, 273);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.lbID);
             this.Controls.Add(this.txtIRNum);
@@ -453,5 +481,7 @@
         private TextBox txtVehicles;
         private ComboBox cmbHospital;
         private TextBox txtTime;
+        private TextBox txtRemarks;
+        private Label label2;
     }
 }

@@ -38,6 +38,9 @@ namespace DRRMOperationsIMS
 
             txtTotalPTS.Text = totalPTS.ToString();
             txtTotalIR.Text = totalIR.ToString();
+
+            viewLatestIR();
+            viewLatestPTS();
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -49,17 +52,17 @@ namespace DRRMOperationsIMS
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             PTSDashboard frm = new PTSDashboard() { TopLevel = false, TopMost = true };
-            this.panMain.Controls.Clear();
-            this.panMain.Controls.Add(frm);
+            this.tablePanel.Controls.Clear();
+            this.tablePanel.Controls.Add(frm);
             frm.Show();
         }
 
         private void btnAdmintools_Click(object sender, EventArgs e)
         {
-            PTSDashboard frm = new PTSDashboard();
+            //PTSDashboard frm = new PTSDashboard();
             PTSTools frm1 = new PTSTools() { TopLevel = false, TopMost = true };
-            this.panMain.Controls.Clear();
-            this.panMain.Controls.Add(frm1);
+            this.tablePanel.Controls.Clear();
+            this.tablePanel.Controls.Add(frm1);
             frm1.Show();
         }
 
@@ -76,16 +79,16 @@ namespace DRRMOperationsIMS
         private void btnIR_Click(object sender, EventArgs e)
         {
             IRDashboard frm = new IRDashboard() { TopLevel = false, TopMost = true };
-            this.panMain.Controls.Clear();
-            this.panMain.Controls.Add(frm);
+            this.tablePanel.Controls.Clear();
+            this.tablePanel.Controls.Add(frm);
             frm.Show();
         }
 
         private void btnIRTools_Click(object sender, EventArgs e)
         {
             IRTools frm1 = new IRTools() { TopLevel = false, TopMost = true };
-            this.panMain.Controls.Clear();
-            this.panMain.Controls.Add(frm1);
+            this.tablePanel.Controls.Clear();
+            this.tablePanel.Controls.Add(frm1);
             frm1.Show();
         }
 
@@ -111,8 +114,36 @@ namespace DRRMOperationsIMS
             System.Windows.Forms.Application.Exit();
         }
 
-        
+        private void viewLatestIR()
+        {
+            con.Open();
+            OleDbCommand cmd = new OleDbCommand("SELECT * FROM tbl_ir ORDER BY DOI ASC", con);
+            OleDbDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                lbIncidentType.Text = reader["NatureOfIncident"].ToString();
+                lbLocation.Text = reader["PlaceOfIncident"].ToString();
+                lbDate.Text = reader["DOI"].ToString();
+                lbIncidentTime.Text = reader["TOI"].ToString();
+                lbRespondedBy.Text = reader["RespondedBy"].ToString();
+            }
+            con.Close();
+        }
 
-       
+        private void viewLatestPTS()
+        {
+            con.Open();
+            OleDbCommand cmd = new OleDbCommand("SELECT * FROM tbl_disp ORDER BY [_Date] ASC", con);
+            OleDbDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                lbCase.Text = reader["_Case"].ToString();
+                lbPatientName.Text = reader["PatientName"].ToString();
+                lbOrigin.Text = reader["Origin"].ToString();
+                lbDestination.Text = reader["Destination"].ToString();
+                lbAssignedTransport.Text = reader["Transport"].ToString();
+            }
+            con.Close();
+        }
     }
 }
