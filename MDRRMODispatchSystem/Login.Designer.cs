@@ -70,6 +70,7 @@
             this.btnAboutUs.Size = new System.Drawing.Size(135, 13);
             this.btnAboutUs.TabIndex = 7;
             this.btnAboutUs.Text = "About MDRRMO IMS";
+            this.btnAboutUs.Click += new System.EventHandler(this.btnAboutUs_Click_1);
             // 
             // secretLogin
             // 

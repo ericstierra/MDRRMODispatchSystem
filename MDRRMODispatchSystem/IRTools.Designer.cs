@@ -319,6 +319,7 @@
             this.cmbHospital.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmbHospital.FormattingEnabled = true;
             this.cmbHospital.Items.AddRange(new object[] {
+            "N/A",
             "DMMDH",
             "NSDAH"});
             this.cmbHospital.Location = new System.Drawing.Point(177, 47);

@@ -33,8 +33,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.cbDispatcher = new System.Windows.Forms.ComboBox();
+            this.btnDel = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.cbTransport = new System.Windows.Forms.ComboBox();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.tbDestination = new System.Windows.Forms.TextBox();
             this.tbOrigin = new System.Windows.Forms.TextBox();
             this.tbAge = new System.Windows.Forms.TextBox();
@@ -47,10 +51,6 @@
             this.lblPtname = new System.Windows.Forms.Label();
             this.lbCase = new System.Windows.Forms.Label();
             this.lbDate = new System.Windows.Forms.Label();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnDel = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.lbID = new System.Windows.Forms.Label();
             this.tbID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -130,21 +130,64 @@
             this.cbDispatcher.Size = new System.Drawing.Size(293, 23);
             this.cbDispatcher.TabIndex = 35;
             // 
+            // btnDel
+            // 
+            this.btnDel.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnDel.FlatAppearance.BorderSize = 0;
+            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnDel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDel.ForeColor = System.Drawing.Color.Black;
+            this.btnDel.Location = new System.Drawing.Point(1245, 166);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(85, 22);
+            this.btnDel.TabIndex = 6;
+            this.btnDel.Text = "Delete";
+            this.btnDel.UseVisualStyleBackColor = false;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnClear.FlatAppearance.BorderSize = 0;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnClear.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnClear.ForeColor = System.Drawing.Color.Black;
+            this.btnClear.Location = new System.Drawing.Point(1145, 166);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(85, 22);
+            this.btnClear.TabIndex = 5;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // cbTransport
             // 
             this.cbTransport.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbTransport.FormattingEnabled = true;
             this.cbTransport.Items.AddRange(new object[] {
-            "PTV-Larry",
+            "PTV-Jontahan",
             "AMB-Sendong",
             "AMB-Mario",
-            "AMB-Danny",
-            "PTV-STAN",
-            "MDRRMO-Medic"});
+            "AMB-Danny"});
             this.cbTransport.Location = new System.Drawing.Point(538, 101);
             this.cbTransport.Name = "cbTransport";
             this.cbTransport.Size = new System.Drawing.Size(372, 23);
             this.cbTransport.TabIndex = 34;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAdd.ForeColor = System.Drawing.Color.Black;
+            this.btnAdd.Location = new System.Drawing.Point(945, 166);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(85, 22);
+            this.btnAdd.TabIndex = 3;
+            this.btnAdd.Text = "Add Item";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label2
             // 
@@ -155,6 +198,21 @@
             this.label2.Size = new System.Drawing.Size(100, 17);
             this.label2.TabIndex = 21;
             this.label2.Text = "Dispatched by:";
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnUpdate.ForeColor = System.Drawing.Color.Black;
+            this.btnUpdate.Location = new System.Drawing.Point(1047, 166);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(85, 22);
+            this.btnUpdate.TabIndex = 4;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // tbDestination
             // 
@@ -265,66 +323,6 @@
             this.lbDate.Size = new System.Drawing.Size(41, 17);
             this.lbDate.TabIndex = 7;
             this.lbDate.Text = "Date:";
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnUpdate.FlatAppearance.BorderSize = 0;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnUpdate.ForeColor = System.Drawing.Color.Black;
-            this.btnUpdate.Location = new System.Drawing.Point(1047, 166);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(85, 22);
-            this.btnUpdate.TabIndex = 4;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // btnDel
-            // 
-            this.btnDel.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnDel.FlatAppearance.BorderSize = 0;
-            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnDel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDel.ForeColor = System.Drawing.Color.Black;
-            this.btnDel.Location = new System.Drawing.Point(1245, 166);
-            this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(85, 22);
-            this.btnDel.TabIndex = 6;
-            this.btnDel.Text = "Delete";
-            this.btnDel.UseVisualStyleBackColor = false;
-            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
-            // 
-            // btnClear
-            // 
-            this.btnClear.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnClear.FlatAppearance.BorderSize = 0;
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnClear.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnClear.ForeColor = System.Drawing.Color.Black;
-            this.btnClear.Location = new System.Drawing.Point(1145, 166);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(85, 22);
-            this.btnClear.TabIndex = 5;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = false;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAdd.ForeColor = System.Drawing.Color.Black;
-            this.btnAdd.Location = new System.Drawing.Point(945, 166);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(85, 22);
-            this.btnAdd.TabIndex = 3;
-            this.btnAdd.Text = "Add Item";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // lbID
             // 

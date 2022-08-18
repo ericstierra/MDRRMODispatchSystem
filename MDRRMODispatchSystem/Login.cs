@@ -28,7 +28,7 @@ namespace DRRMOperationsIMS
 
         }
 
-        private void btnAboutUs_Click(object sender, EventArgs e)
+        private void btnAboutUs_Click_1(object sender, EventArgs e)
         {
             About frm2 = new About();
             frm2.Show();
