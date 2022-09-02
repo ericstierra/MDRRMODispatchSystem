@@ -36,12 +36,13 @@
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label1.Font = new System.Drawing.Font("OCR A Extended", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(60, 61);
+            this.label1.Location = new System.Drawing.Point(31, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(504, 120);
+            this.label1.Size = new System.Drawing.Size(570, 120);
             this.label1.TabIndex = 0;
-            this.label1.Text = "MDRRMO Atimonan Information Management System\r\nfor Trainings and Seminars\r\n\r\nDeve" +
-    "loped by: Eric S. Tierra\r\nLicense: MIT License\r\nAll Rights Reserved 2022";
+            this.label1.Text = "MDRRMO Atimonan Information Management System\r\nfor Patient Transport Services and" +
+    " Incidents Report\r\n\r\nDeveloped by: Eric S. Tierra\r\nLicense: MIT License\r\nAll Rig" +
+    "hts Reserved 2022";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // About

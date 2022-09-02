@@ -32,11 +32,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAboutUs = new System.Windows.Forms.Label();
             this.secretLogin = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -47,11 +47,11 @@
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel1.Controls.Add(this.btnAboutUs);
             this.panel1.Controls.Add(this.secretLogin);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtPass);
+            this.panel1.Controls.Add(this.txtUsername);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
             this.panel1.Name = "panel1";
@@ -84,16 +84,16 @@
             this.secretLogin.Text = "e";
             this.secretLogin.Click += new System.EventHandler(this.secretLogin_Click);
             // 
-            // button1
+            // btnLogin
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(482, 585);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 35);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnLogin.Location = new System.Drawing.Point(482, 585);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(116, 35);
+            this.btnLogin.TabIndex = 5;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -117,21 +117,21 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Username:";
             // 
-            // textBox2
+            // txtPass
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(382, 531);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(311, 27);
-            this.textBox2.TabIndex = 2;
+            this.txtPass.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPass.Location = new System.Drawing.Point(382, 531);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(311, 27);
+            this.txtPass.TabIndex = 2;
             // 
-            // textBox1
+            // txtUsername
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(382, 466);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(311, 27);
-            this.textBox1.TabIndex = 1;
+            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtUsername.Location = new System.Drawing.Point(382, 466);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(311, 27);
+            this.txtUsername.TabIndex = 1;
             // 
             // label1
             // 
@@ -167,11 +167,11 @@
 
         private Panel panel1;
         private Label label1;
-        private Button button1;
+        private Button btnLogin;
         private Label label3;
         private Label label2;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtPass;
+        private TextBox txtUsername;
         private Label secretLogin;
         private Label btnAboutUs;
     }

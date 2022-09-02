@@ -30,6 +30,29 @@ namespace DRRMOperationsIMS
                 );
             dt = new DataTable();
             adapt.Fill(dt);
+
+            //Set AutoGenerateColumns False
+            dataGridView1.AutoGenerateColumns = false;
+
+            dataGridView1.ColumnCount = 10;
+            this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            //Columns List
+            dataGridView1.Columns[0].Name = "ID";
+            dataGridView1.Columns[0].HeaderText = "PTS No.";
+            dataGridView1.Columns[0].DataPropertyName = "ID";
+            dataGridView1.Columns[0].Width = 50;
+
+            dataGridView1.Columns[1].Name = "_Date";
+            dataGridView1.Columns[1].HeaderText = "Date Scheduled";
+            dataGridView1.Columns[1].DataPropertyName = "_Date";
+            dataGridView1.Columns[1].Width = 90;
+
+            dataGridView1.Columns[2].Name = "_Case";
+            dataGridView1.Columns[2].HeaderText = "Patient Case";
+            dataGridView1.Columns[2].DataPropertyName = "_Case";
+            dataGridView1.Columns[2].Width = 150;
+
             dataGridView1.DataSource = dt;
             con.Close();
         }

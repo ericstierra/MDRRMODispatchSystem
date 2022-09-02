@@ -76,6 +76,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.mainFrmBindingSource)).BeginInit();
             this.panelPTS.SuspendLayout();
             this.panelIR.SuspendLayout();
@@ -96,7 +97,7 @@
             this.btnIRTools.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnIRTools.ForeColor = System.Drawing.Color.Black;
             this.btnIRTools.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIRTools.Location = new System.Drawing.Point(978, 401);
+            this.btnIRTools.Location = new System.Drawing.Point(980, 396);
             this.btnIRTools.Name = "btnIRTools";
             this.btnIRTools.Size = new System.Drawing.Size(141, 19);
             this.btnIRTools.TabIndex = 13;
@@ -110,7 +111,7 @@
             this.btnIR.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnIR.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnIR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
-            this.btnIR.Location = new System.Drawing.Point(180, 401);
+            this.btnIR.Location = new System.Drawing.Point(180, 395);
             this.btnIR.Name = "btnIR";
             this.btnIR.Size = new System.Drawing.Size(141, 21);
             this.btnIR.TabIndex = 9;
@@ -125,7 +126,7 @@
             this.btnAdmintools.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAdmintools.ForeColor = System.Drawing.Color.Black;
             this.btnAdmintools.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdmintools.Location = new System.Drawing.Point(1130, 401);
+            this.btnAdmintools.Location = new System.Drawing.Point(1132, 396);
             this.btnAdmintools.Name = "btnAdmintools";
             this.btnAdmintools.Size = new System.Drawing.Size(132, 19);
             this.btnAdmintools.TabIndex = 6;
@@ -139,7 +140,7 @@
             this.btnPTS.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnPTS.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnPTS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
-            this.btnPTS.Location = new System.Drawing.Point(25, 401);
+            this.btnPTS.Location = new System.Drawing.Point(25, 395);
             this.btnPTS.Name = "btnPTS";
             this.btnPTS.Size = new System.Drawing.Size(144, 21);
             this.btnPTS.TabIndex = 4;
@@ -321,6 +322,7 @@
             this.panMain.Controls.Add(this.panel2);
             this.panMain.Controls.Add(this.panelIR);
             this.panMain.Controls.Add(this.panelPTS);
+            this.panMain.Controls.Add(this.panel4);
             this.panMain.Location = new System.Drawing.Point(0, -1);
             this.panMain.Name = "panMain";
             this.panMain.Size = new System.Drawing.Size(1393, 738);
@@ -333,12 +335,13 @@
             this.viewProfileIR.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.viewProfileIR.ForeColor = System.Drawing.Color.Black;
             this.viewProfileIR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.viewProfileIR.Location = new System.Drawing.Point(1269, 401);
+            this.viewProfileIR.Location = new System.Drawing.Point(1271, 396);
             this.viewProfileIR.Name = "viewProfileIR";
             this.viewProfileIR.Size = new System.Drawing.Size(93, 19);
             this.viewProfileIR.TabIndex = 14;
             this.viewProfileIR.Text = "View IR Tool";
             this.viewProfileIR.UseVisualStyleBackColor = true;
+            this.viewProfileIR.Click += new System.EventHandler(this.viewProfileIR_Click);
             // 
             // tablePanel
             // 
@@ -735,6 +738,14 @@
             this.label8.TabIndex = 7;
             this.label8.Text = "Latest Incident Report";
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel4.Location = new System.Drawing.Point(13, 388);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1371, 34);
+            this.panel4.TabIndex = 15;
+            // 
             // mainFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -821,5 +832,6 @@
         private Panel tablePanel;
         private Button viewProfileIR;
         private Label label1;
+        private Panel panel4;
     }
 }

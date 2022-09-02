@@ -88,8 +88,7 @@ namespace DRRMOperationsIMS
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            this.Controls.Clear();
-            this.InitializeComponent();
+            clearTextbox();
         }
 
         private void clearTextbox()

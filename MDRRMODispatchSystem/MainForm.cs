@@ -123,7 +123,7 @@ namespace DRRMOperationsIMS
             {
                 lbIncidentType.Text = reader["NatureOfIncident"].ToString();
                 lbLocation.Text = reader["PlaceOfIncident"].ToString();
-                lbDate.Text = reader["DOI"].ToString();
+                lbDate.Text = Convert.ToDateTime(reader["DOI"]).ToString("dd/MM/yyyy");
                 lbIncidentTime.Text = reader["TOI"].ToString();
                 lbRespondedBy.Text = reader["RespondedBy"].ToString();
             }
@@ -144,6 +144,12 @@ namespace DRRMOperationsIMS
                 lbAssignedTransport.Text = reader["Transport"].ToString();
             }
             con.Close();
+        }
+
+        private void viewProfileIR_Click(object sender, EventArgs e)
+        {
+            viewprofile frm2 = new viewprofile();
+            frm2.Show();
         }
     }
 }
